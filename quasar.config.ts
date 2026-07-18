@@ -57,7 +57,7 @@ export default defineConfig((/* ctx */) => {
 
       // rebuildCache: true, // rebuilds Vite/linter/etc cache on startup
 
-      // publicPath: '/',
+      publicPath: 'https://emassivemaker.com/clientes/ThompsonUniversity/',
       // analyze: true,
       // env: {},
       // rawDefine: {}
