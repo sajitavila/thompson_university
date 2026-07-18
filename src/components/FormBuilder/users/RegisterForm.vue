@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import FormBuilder, { useFormBuilder } from "@benjaminor-dev/quasar-app-extension-form-builder";
-import type { FormBuilderSubmitPayload } from "@benjaminor-dev/quasar-app-extension-form-builder/types";
-import { QBtn } from "quasar";
+import FormBuilder, { useFormBuilder } from '@benjaminor-dev/quasar-app-extension-form-builder';
+import type { FormBuilderSubmitPayload } from '@benjaminor-dev/quasar-app-extension-form-builder/types';
+import { QBtn } from 'quasar';
 
 /**
  * Importacion de la extension de FormBuilder.
@@ -20,31 +20,31 @@ type RegisterForm = {
  * Configuracion del formulario.
  */
 const formBuilderConfig = defineForm<RegisterForm>({
-  formName: "RegisterForm",
+  formName: 'RegisterForm',
 
   // Valores iniciales al registrar el formulario en Pinia.
   defaultValues: {
-    fullName: "Benjamín Olvera",
+    fullName: 'Benjamín Olvera',
   },
 
-  fields: ({ /* preset */ }) => [
+  fields: () => [
     {
-      type: "InputText",
-      model: "fullName",
-      label: "Nombre completo",
+      type: 'InputText',
+      model: 'fullName',
+      label: 'Nombre completo',
       requiredOn: () => true,
       rules: [inputRules.onlyLettersAndSpaces()],
     },
     {
-      type: "InputEmail",
-      model: "email",
-      label: "Correo",
+      type: 'InputEmail',
+      model: 'email',
+      label: 'Correo',
       requiredOn: () => true,
     },
     // Botones de accion (reset / submit / ejemplo store).
     {
-      type: "SlotField",
-      props: { slotName: "action-buttons" },
+      type: 'SlotField',
+      props: { slotName: 'action-buttons' },
     },
   ],
 });
@@ -52,7 +52,7 @@ const formBuilderConfig = defineForm<RegisterForm>({
 /**
  * Seleccion del formulario (mismo formName en cualquier componente).
  */
-const registerFormStore = selectFormStore<RegisterForm>("RegisterForm");
+const registerFormStore = selectFormStore<RegisterForm>('RegisterForm');
 
 /**
  * Ejemplo: restaurar valores por defecto desde el store.
@@ -65,8 +65,8 @@ function resetFromStore() {
  * Handler de envio del formulario.
  */
 const onSubmit = (payload: FormBuilderSubmitPayload<RegisterForm>) => {
-  console.log("Form submit:", payload);
-  console.log("Valores en store:", registerFormStore.getValues());
+  console.log('Form submit:', payload);
+  console.log('Valores en store:', registerFormStore.getValues());
 };
 </script>
 
