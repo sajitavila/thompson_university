@@ -1,0 +1,52 @@
+{
+  "@benjaminor-dev/datatable": {
+    "__internal": {
+      "generatedScaffoldPaths": [],
+      "removeGeneratedScaffoldOnUninstall": true,
+      "defaultsBootName": "bor/bor-datatable-defaults"
+    }
+  },
+  "@benjaminor-dev/form-builder": {
+    "__internal": {
+      "generatedScaffoldPaths": [],
+      "removeGeneratedScaffoldOnUninstall": true,
+      "defaultsBootName": "bor/bor-form-builder-defaults",
+      "packageJsonScripts": {
+        "bor:help": "node ./scripts/bor/bor-help.mjs",
+        "bor:make-form": "node ./scripts/bor/bor-make-form.mjs",
+        "bor:make-formlist": "node ./scripts/bor/bor-make-formlist.mjs",
+        "bor:make-field": "node ./scripts/bor/bor-make-field.mjs"
+      }
+    }
+  },
+  "@benjaminor-dev/table-builder": {
+    "__internal": {
+      "generatedScaffoldPaths": [
+        "scripts/bor/bor-make-table.mjs"
+      ],
+      "removeGeneratedScaffoldOnUninstall": true,
+      "defaultsBootName": "bor/bor-table-builder-defaults",
+      "packageJsonScripts": {
+        "bor:make-table": "node ./scripts/bor/bor-make-table.mjs"
+      }
+    }
+  },
+  "@benjaminor-dev/dialog-message": {
+    "__internal": {
+      "generatedScaffoldPaths": [
+        "src/boot/bor/bor-dialog-message-defaults.ts"
+      ],
+      "removeGeneratedScaffoldOnUninstall": true,
+      "defaultsBootName": "bor/bor-dialog-message-defaults"
+    }
+  },
+  "@benjaminor-dev/dialog-loader": {
+    "__internal": {
+      "generatedScaffoldPaths": [
+        "src/boot/bor/bor-dialog-loader-defaults.ts"
+      ],
+      "removeGeneratedScaffoldOnUninstall": true,
+      "defaultsBootName": "bor/bor-dialog-loader-defaults"
+    }
+  }
+}
